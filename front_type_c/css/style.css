@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+:root{
+	--color-main:#ff7710;
+	--w:920px;
+}
+
+
+body{
+	margin:0;
+	padding:0;
+	font-size:14px;
+	font-family:'Pretendard-Regular';
+	min-width:var(--w);
+}
+
+input,textarea,button{
+	font-family:'Pretendard-Regular';
+}
+
+
+.center-body{
+	display: flex;
+	justify-content: center;
+}
+
+.form-box{
+	width:400px;
+	padding-top: 80px;
+}
+
+
+
+.form-box .box{
+	display: flex;
+	flex-direction: column;
+	margin-top:20px;
+}
+
+.form-box .box > label{
+	font-size: 14px;
+	color: #444859;
+	margin-bottom:4px;
+	font-weight: 700;
+}
+
+.form-box .box > input{
+	padding: 10px 4px;
+	font-size: 15px;
+	border: 1px solid #D0D0D0;
+	outline: none;
+	border-radius: 8px;
+	font-family: basic;
+}
+
+
+.form-box .box > input:focus{
+	border: 1px solid var(--color-main);
+}
+
+
+.form-box select{
+	width:100%;
+	height: 40px;
+	border-radius:8px;
+	font-family: basic;
+}
+
+
+
+
+
+.form-box select:focus{
+	border:1px solid var(--color-main);
+	outline:1px solid var(--color-main);
+}
+
+.form-box .submit-btn{
+	width:100%;
+	padding:8px;
+	background: #222;
+	color:#fff;
+	font-weight: 700;
+	cursor: pointer;
+	border-radius:8px;
+	margin-top:30px;
+	border:1px solid #dedede;
+	transition-duration: 0.2s;
+}
+
+
+.form-box .submit-btn:hover{
+	background: #000;
+	
+}
+
+
+

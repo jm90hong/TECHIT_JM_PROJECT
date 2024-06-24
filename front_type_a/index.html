@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+<meta charset="utf-8">
+<title>웹 프론트</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+<link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+    <header>
+		<div class="inner">
+			<img class="logo" src="./img/logo.png"/>
+			<div>
+				<span class="menu-item">IT개발</span>
+				<span class="menu-item">웹프론트</span>
+				<span class="menu-item">백엔드</span>
+				<span class="menu-item">데이터베이스</span>
+				<span class="menu-item">서버</span>
+				<span class="menu-item">프로젝트</span>
+			</div>
+		</div>
+	</header>
+	
+	
+	<div class="top-img-container">
+		<img src="./img/bg.jpg"/>
+		
+	</div>
+	
+	
+	
+	<div class="section">
+		<div class="inner">
+			<div class="title-box">
+				<span class="title">회원리스트</span>
+				<div>
+					<input type="text" placeholder="이름"/>
+					<input type="text" placeholder="주소"/>
+					<input type="number" placeholder="나이"/>
+
+					<button class="mini-btn">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						회원등록
+					</button>
+				</div>
+			</div>
+			<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">이름</th>
+				      <th scope="col">나이</th>
+				      <th scope="col">주소</th>
+				  
+				      
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <!-- <tr>
+				      <th scope="row">홍정민</th>
+				      <td>35</td>
+				      <td>서울시</td>
+				     
+				    </tr>
+				    <tr>
+				      <th scope="row">김철수</th>
+				      <td>27</td>
+				      <td>부산시</td>  
+				    </tr> -->
+
+					
+				    
+				    
+				  </tbody>
+				</table>
+			
+			
+		</div>
+	</div>
+	
+	
+	<footer class="section" >
+		<div class="inner">
+			
+		</div>
+	</footer>
+</body>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function() {
+    // 버튼 요소 선택
+    const button = document.querySelector(".mini-btn");
+    // 입력 필드 요소 선택
+    const nameInput = document.querySelector("input[placeholder='이름']");
+    const addressInput = document.querySelector("input[placeholder='주소']");
+    const ageInput = document.querySelector("input[placeholder='나이']");
+    // 테이블의 tbody 요소 선택
+    const tbody = document.querySelector("table tbody");
+
+    // 버튼 클릭 이벤트 리스너 추가
+    button.addEventListener("click", function() {
+      // 입력된 값 가져오기
+      const name = nameInput.value;
+      const address = addressInput.value;
+      const age = ageInput.value;
+
+      // 입력 값이 비어있는지 확인
+      if (name === "" || address === "" || age === "") {
+        alert("모든 필드를 입력해주세요.");
+        return;
+      }
+
+      // 새로운 행 생성
+      const newRow = document.createElement("tr");
+
+      // 이름 셀 추가
+      const nameCell = document.createElement("th");
+      nameCell.scope = "row";
+      nameCell.textContent = name;
+
+	  //tr에 추가
+      newRow.appendChild(nameCell);
+
+      // 나이 셀 추가
+      const ageCell = document.createElement("td");
+      ageCell.textContent = age;
+	  
+	  //tr에 추가
+      newRow.appendChild(ageCell);
+
+      // 주소 셀 추가
+      const addressCell = document.createElement("td");
+      addressCell.textContent = address;
+
+	  //tr에 추가
+      newRow.appendChild(addressCell);
+
+      // 새로운 행을 tbody에 추가
+      tbody.appendChild(newRow);
+
+      // 입력 필드 초기화
+      nameInput.value = "";
+      addressInput.value = "";
+      ageInput.value = "";
+    });
+  });
+</script>
+</html>
